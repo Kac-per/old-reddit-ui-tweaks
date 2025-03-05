@@ -1,0 +1,10 @@
+/* ==UserStyle==
+@name        Old Reddit (media iframe)
+@description For old reddit (inside yt embed iframe)
+@match       *://*.redditmedia.com/*
+==/UserStyle== */
+
+html, body, iframe {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,529 @@
+/* ==UserStyle==
+@name        Old Reddit
+@description For old reddit
+@match       *://old.reddit.com/*
+==/UserStyle== */
+
+:root {
+    -webkit-text-size-adjust: none;
+}
+.infobar-toaster-container,
+.premium-banner-outer,
+#sr-header-area,
+#header-bottom-right,
+.read-next-container {
+    display: none;
+}
+.interstitial,
+.interstitial .buttons {
+    max-width: 100%;
+}
+.interstitial .buttons {
+    width: auto;
+    flex-wrap: wrap;
+    gap: 10px 0;
+}
+.interstitial .buttons > .c-btn {
+    flex-grow: 1;
+    flex-basis: 40%;
+}
+.footer {
+    flex-wrap: wrap;
+}
+.footer .col {
+    flex: 1 1 25%;
+}
+.tabmenu {
+    overflow: auto;
+    max-width: 100%;
+    margin-bottom: -1px;
+}
+.tabmenu li a,
+.entry .buttons li a {
+    display: inline-block;
+}
+.tabmenu li a,
+.drop-choices a.choice {
+    padding: 0.5em 1em;
+}
+.tabmenu::-webkit-scrollbar {
+    display: none;
+}
+.menuarea {
+    padding-bottom: 1em;
+}
+.link.promotedlink {
+    display: none;
+}
+.morelink .nub {
+    display: none;
+}
+.commentarea .menuarea {
+    margin-top: 8px;
+}
+.media-gallery .gallery-navigation {
+    padding: 0.5em 1em;
+    background-color: #eee;
+}
+.media-gallery .gallery-nav-prev,
+.media-gallery .gallery-nav-next {
+    margin-right: 0.25em;
+    margin-bottom: 0.25em;
+}
+#searchexpando input {
+    margin-bottom: 0;
+}
+#searchexpando label {
+    margin-bottom: 10px;
+}
+textarea {
+    border-radius: 0;
+}
+#header-img {
+    max-width: 60%;
+    height: auto;
+}
+.errorpage-message,
+#classy-error img {
+    max-width: 100%;
+}
+.flair,
+.linkflairlabel,
+.flairrichtext {
+    white-space: normal;
+}
+#search_showmore,
+.combined-search-page .linkflairlabel,
+.search-result-footer {
+    white-space: normal;
+    word-break: break-all;
+}
+.search-result-group-header {
+    display: flow-root;
+}
+.md img {
+    height: auto;
+}
+.expando iframe {
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+}
+.expando-gate.expando-gate--interstitial {
+    width: auto!important;
+}
+body.with-listing-chooser #header .pagename {
+    position: static;
+}
+body.with-listing-chooser.with-listing-chooser .listing-chooser {
+    background-color: transparent;
+}
+body.with-listing-chooser.listing-chooser-collapsed .listing-chooser {
+    transition: none!important;
+    animation: none!important;
+}
+.tabmenu .jump-to-sidebar {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+    body {
+        color: #ccc;
+        background: #1c1c1c;
+    }
+    
+    .entry .title,
+    .titlebox h1 a {
+        color: #fff;
+    }
+    .side {
+        background: transparent;
+        color: #bbb;
+    }
+    .side.side.side.side *,
+    .footer,
+    .footer.footer.footer.footer * {
+        border-color: #444;
+    }
+    hr {
+        color: #444;
+        border-style: solid;
+    }
+    .side hr {
+        background: #444;
+    }
+    .md {
+        color: #bbb;
+    }
+    .md hr {
+        background-color: #444;
+    }
+    #header-bottom-left {
+        background: #0f0f0f;
+    }
+    .tabmenu li a {
+        background: #222;
+        color: lightblue;
+    }
+    .tabmenu li.selected a {
+        background: #1c1c1c;
+        color: #fff;
+        border-bottom-color: #1c1c1c;
+    }
+    .pagename, .pagename a {
+        color: #fff;
+    }
+    #header-img {
+        filter: invert(1) hue-rotate(180deg);
+    }
+    .expando-button:not(:hover) {
+        filter: brightness(0.55) contrast(3);
+    }
+    .drop-choices,
+    .linkinfo,
+    #sr-drop-down {
+        background: #0f0f0f;
+    }
+    .md code,
+    .md pre,
+    .usertext.grayed .usertext-body,
+    .link .usertext-body .md,
+    .subreddit .usertext .md,
+    .interstitial-subreddit-description,
+    .roundfield {
+        background: #262626;
+    }
+    .roundfield,
+    .roundfield textarea, .roundfield input[type=text], .roundfield input[type=url], .roundfield input[type=password], .roundfield input[type=number], #compose-message .roundfield select {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .usertext.grayed .usertext-body .md,
+    .md blockquote,
+    .md del {
+        color: #888;
+    }
+    textarea {
+        background-color: #0f0f0f;
+        color: #ccc;
+        border-color: #444;
+    }
+    .morelink,
+    .searchpane {
+        background: #0f0f0f;
+    }
+    .searchpane {
+        position: relative;
+        z-index: 1;
+    }
+    .subreddits-page .searchpane:before {
+        content: '';
+        background: url(https://www.redditstatic.com/search-large.png) 26px center no-repeat;
+        position: absolute;
+        filter: invert(1);
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: block;
+        pointer-events: none;
+    }
+    .morelink:hover {
+        background: #262626;
+    }
+    .disabled .morelink,
+    .disabled .morelink:hover,
+    .sidebox .spacer {
+        background: transparent;
+    }
+    .infobar {
+        background-color: #262626;
+    }
+    .media-gallery .gallery-nav-disabled {
+        color: #444;
+    }
+    .media-gallery .gallery-navigation {
+        background-color: #262626;
+    }
+    .crosspost-preview {
+        background-color: #0f0f0f;
+        border-color: #444;
+    }
+    .thing .title {
+        color: #fff;
+    }
+    .thing .title:visited {
+        color: violet;
+    }
+    .titlebox form.toggle,
+    .leavemoderator {
+        background-color: transparent;
+    }
+    .wiki-page .wiki-page-content .description h2 {
+        color: #ccc;
+    }
+    .wiki-page-content .md h1, .wiki-page-content .md h6 {
+        color: #ccc;
+    }
+    .sitetable.wikirevisionlisting {
+        overflow-x: auto;
+    }
+    .generic-table.generic-table,
+    .wiki-page .wiki-page-content .pagelisting {
+        color: #fff;
+    }
+    .trophy-area .content {
+        background-color: #222;
+    }
+    .trophy-name {
+        color: #fff!important;
+    }
+    .search-result-group-header,
+    .subreddit .usertext .md {
+        border-color: #444;
+    }
+    [style="color:black"] {
+        color: #fff!important;
+    }
+    .search-expando.collapsed:before {
+        background: linear-gradient(to bottom,rgba(28, 28, 28,0) 0%,#1c1c1c 100%);
+    }
+    .crosspost-preview.video .crosspost-preview-content {
+        background-color: transparent;
+    }
+    .create-multi input {
+        color: #0f0f0f;
+    }
+    .listing-chooser li {
+        background-color: transparent;
+        border-color: #444;
+    }
+    .listing-chooser .create input[type="text"] {
+        background-color: #0f0f0f;
+    }
+    body.with-listing-chooser .listing-chooser .grippy {
+        filter: invert(1) hue-rotate(180deg);
+        box-shadow: 0 0 6px rgba(255,255,255,0.2);
+    }
+    .multi-details button.remove-sr.remove-sr.remove-sr.remove-sr,
+    .filtered-details button.remove-sr.remove-sr.remove-sr.remove-sr,
+    .multi-details button.add.remove-srd.remove-srd.remove-sr,
+    .filtered-details button.add.remove-srd.remove-srd.remove-sr,
+    .multi-details form.add-sr button.add.add,
+    .filtered-details form.add-sr button.add.add {
+        border-color: transparent;
+        filter: invert(1);
+    }
+}
+@media (max-width: 1000px) {
+    .wiki-page .wiki-page-content .wiki>.toc>ul {
+        float: none;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .side {
+        float: none;
+        width: auto;
+        order: 2;
+        margin-top: 3em;
+    }
+    .side ~ .content {
+        order: 1;
+    }
+    .side ~ * {
+        order: 3;
+    }
+    .wiki-page .wiki-page-content,
+    .panestack-title,
+    .commentarea .menuarea,
+    #noresults,
+    .infobar,
+    .searchpane.raisedbox {
+        margin-right: 15px;
+    }
+    .search-result-group {
+        min-width: 0;
+    }
+    .combined-search-page .searchpane {
+        margin: 0;
+    }
+    .tabmenu .jump-to-sidebar {
+        display: initial;
+    }
+}
+@media (max-width: 600px) {
+    .link .rank {
+        display: none;
+    }
+    .rank + .midcol {
+        margin: 0;
+        z-index: 1;
+    }
+    .rank + .midcol .score {
+        font-size: 10px;
+    }
+    .link {
+        display: flex;
+    }
+    .thing .rank + .midcol,
+    .thing a.thumbnail {
+        position: absolute;
+    }
+    .rank + .midcol {
+        left: 0;
+    }
+    .thing a.thumbnail {
+        transform: translateX(40%);
+    }
+    .link .entry {
+        padding-left: 2em;
+        overflow: visible;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    .link .thumbnail + .entry {
+        padding-left: 10em;
+    }
+    .expando {
+        margin-left: calc(-2.5em - 6px);
+        margin-right: -5px;
+    }
+    .thumbnail + .entry .expando {
+        margin-left: calc(-10em - 11px);
+    }
+    .reddit-video-player-root:after {
+        content: none;
+    }
+    .reddit-video-player-root>video,
+    .reddit-video-player-root>img {
+        position: static;
+        transform: none;
+    }
+    .media-preview,
+    .media-preview .no-constraints-when-pinned {
+        min-width: 0!important;
+        min-height: 0!important;
+        max-width: none!important;
+        max-height: none!important;
+    }
+    .reddit-video-player-root.portrait>video,
+    .reddit-video-player-root.portrait>img {
+        height: auto!important;
+        width: 100%;
+        max-height: 100vh;
+    }
+    video.preview {
+        max-width: 100%;
+        height: auto!important;
+    }
+    .expando + .flat-list.buttons {
+        margin-left: calc(-10em - 11px);
+    }
+    .search-result-group {
+        padding: 0 5px;
+    }
+    .combined-search-page .searchpane {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .combined-search-page #search input[type=text] {
+        min-width: 0;
+    }
+    .combined-search-page #search {
+        padding-right: 60px;
+    }
+    .subreddit .midcol {
+        width: auto!important;
+    }
+    .subreddits-page .searchpane {
+        padding-left: 5px;
+        background-position: calc(100% + 5px) center;
+    }
+    .subreddits-page .searchpane #search input[type=text] {
+        max-width: 100%;
+    }
+    .subreddits-page .searchpane:before {
+        left: auto;
+        width: 70px;
+        z-index: -1;
+    }
+    body.with-listing-chooser.with-listing-chooser .listing-chooser {
+        z-index: 100;
+        position: absolute;
+        right: 0;
+    }
+    body.with-listing-chooser:not(.listing-chooser-collapsed) .listing-chooser {
+        overflow: visible;
+    }
+    body.with-listing-chooser.listing-chooser-collapsed .listing-chooser {
+        width: 20px;
+        background-color: transparent;
+        top: 0;
+    }
+    body.with-listing-chooser:not(.listing-chooser-collapsed) .thing .rank + .midcol {
+        left: 140px;
+    }
+    body.with-listing-chooser.listing-chooser-collapsed .listing-chooser .contents {
+        opacity: 0;
+        pointer-events: none;
+    }
+    body.with-listing-chooser:not(.listing-chooser-collapsed) .listing-chooser .contents {
+        margin-top: 80px;
+    }
+    body.with-listing-chooser.with-listing-chooser .listing-chooser .grippy {
+        width: 30px;
+        height: 48px;
+        background: linear-gradient(to bottom, transparent 20%, black 20%, black 26%, transparent 26%, transparent 47%, black 47%, black 53%, transparent 53%, transparent 74%, black 74%, black 80%, transparent 80%);
+        border: none;
+        box-shadow: none;
+    }
+    body.with-listing-chooser:not(.listing-chooser-collapsed) .listing-chooser .grippy {
+        top: -65px;
+        left: 5px;
+    }
+    body.with-listing-chooser.with-listing-chooser .listing-chooser .grippy:after {
+        content: none;
+    }
+    body.with-listing-chooser.with-listing-chooser #header-img {
+        margin-left: 40px;
+    }
+}
+
+@media (pointer: coarse) {
+    .tabmenu li a,
+    .drop-choices a.choice,
+    .media-gallery .gallery-navigation {
+        padding: 1em;
+    }
+    .expando-button {
+        transform: scale(1.5);
+        margin: 10px 15px 2px 6px;
+    }
+    .link .flat-list {
+        margin-top: 0.5em;
+    }
+    .entry .buttons li a,
+    .gray-buttons button,
+    .gray-buttons a {
+        padding: 0.5em 1em;
+        background-color: #eee;
+        margin-bottom: 0.5em;
+    }
+    #search input[type=text] {
+        font-size: 16px;
+    }
+}
+
+@media (pointer: coarse) and (prefers-color-scheme: dark) {
+    .entry .buttons li a,
+    .gray-buttons button,
+    .gray-buttons a {
+        color: #ccc;
+        background: #262626;
+    }
+}
