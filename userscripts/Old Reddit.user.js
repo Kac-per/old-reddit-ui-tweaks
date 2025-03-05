@@ -2,6 +2,8 @@
 // @name        Old Reddit
 // @description For old reddit
 // @match       *://old.reddit.com/*
+// @namespace   https://github.com/Kac-per
+// @version     1.0.0
 // ==/UserScript==
 
 const setMeta = (name, content) => {

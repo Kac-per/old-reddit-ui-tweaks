@@ -2,6 +2,8 @@
 @name        Old Reddit (media iframe)
 @description For old reddit (inside yt embed iframe)
 @match       *://*.redditmedia.com/*
+@namespace   https://github.com/Kac-per
+@version     1.0.0
 ==/UserStyle== */
 
 html, body, iframe {
